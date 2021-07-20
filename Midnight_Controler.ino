@@ -5,14 +5,11 @@
 //having access to a color database In which to help program each song will be added and can already
 // be found in it's initial stages in colorValues.h
 // grabbing the velocity from the output is the next task for this program
-
 int inputRecieved=-1;
 #include "Tlc5940.h"
 #include "colorValues.h"
 #include "midiClass.h"
 #include "functions.h"
-
-
 
 int index = 0;
 int activeEnd=0;
@@ -32,13 +29,7 @@ void setup() {
   Serial.begin(9600);
   Tlc.init();
   Tlc.clear();
-
-
 }
-
-
-
-
 void loop() {
 while(Serial1.available()>0){ 
   inputRecieved=Serial1.read();
